@@ -5,5 +5,5 @@ import pytest
 
 
 @pytest.fixture()
-def username():
-    return 'overridden-' + 'username'
+def username(username):
+    return 'overridden-' + username
