@@ -5,7 +5,7 @@ import pytest
 import sys
 
 
-@pytest.mark.skipif(sys.version_info < (3, 6), reason="requires python3.6 or higher")
+@pytest.mark.skipif(sys.version_info < (3, 7), reason="requires python3.6 or higher")
 class TestSkipClass:
-    def test_function(self):
-        "will not be setup or run under 'win32' platform"
+    def test_class(self):
+        "requires python3.6 or higher"
