@@ -4,7 +4,7 @@
 import pytest
 
 
-# 使用mark标记 带参数的fixture 中的某些参数枚举值s
+# 使用mark标记 带参数的fixture 中的某些参数枚举值
 @pytest.fixture(params=[0, 1, pytest.param(2, marks=pytest.mark.skip)])
 def data_set(request):
     return request.param
@@ -12,3 +12,7 @@ def data_set(request):
 
 def test_data(data_set):
     pass
+
+
+if __name__ == '__main__':
+    pytest.main(['-vs', 'test_fixture_marks.py'])
